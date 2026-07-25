@@ -5,12 +5,12 @@ html,body {
 }
 
 body {
-    background-color: var(--background-color);
+    background-color: #ffffff;
     font-family: "Yu gothic Light", "Yu Gothic", "游ゴシック体", "游ゴシック", "YuGothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, sans-serif;
 }
 
 header {
-    background-color: var(--background-color);
+    background-color: #ffffff;
     position: fixed;
     display: grid;
     top: 0;
@@ -22,7 +22,7 @@ header {
     grid-template-rows: 1fr;
     border-bottom: 1px solid #e0e0e0;
     text-align: center;
-    z-index: 100;
+    z-index: 1000;
 }
 
 header h1 {
