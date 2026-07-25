@@ -1,0 +1,130 @@
+.link-item {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    width: 30%;
+    border-bottom: solid 1px black;
+    transition: width 0.3s ease;
+
+    cursor: pointer;
+}
+
+.link-item:hover {
+    width: 80%;
+}
+
+.link-item::after {
+    opacity: 0;
+    position: absolute;
+    content: "→";
+    transform: translateX(-20px);
+    right: 0;
+    top: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.link-item:hover::after {
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+.link-item h2 {
+    font-size: 19px;
+    margin-top: 15px;
+}
+
+.icon {
+    position: absolute;
+    right: 40px;
+    top: 0;
+
+    width: 60px;
+    height: 60px;
+
+    opacity: 0;
+    transform: translateX(20px);
+    transition: all 0.3s ease-in-out;
+
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+}
+
+.link-item:hover .icon {
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+/*--------------------*/
+
+.icon-twitter {
+    -webkit-mask-image: url('/res/icons/x.svg');
+    mask-image: url('/res/icons/x.svg');
+
+    background: linear-gradient(to bottom, #000000 0%, rgba(29, 161, 242, 0) 100%);
+}
+
+.icon-github {
+    -webkit-mask-image: url('/res/icons/github.svg');
+    mask-image: url('/res/icons/github.svg');
+
+    background: linear-gradient(to bottom, #181717 0%, rgba(29, 161, 242, 0) 100%);
+}
+
+.icon-discord {
+    -webkit-mask-image: url('/res/icons/discord.svg');
+    mask-image: url('/res/icons/discord.svg');
+
+    background: linear-gradient(to bottom, #5865F2 0%, rgba(29, 161, 242, 0) 100%);
+}
+
+.icon-note {
+    -webkit-mask-image: url('/res/icons/note.svg');
+    mask-image: url('/res/icons/note.svg');
+
+    background: linear-gradient(to bottom, #000000 0%, rgba(29, 161, 242, 0) 100%);
+}
+
+.icon-modrinth {
+    -webkit-mask-image: url('/res/icons/modrinth.svg');
+    mask-image: url('/res/icons/modrinth.svg');
+
+    background: linear-gradient(to bottom, #00AF5C 0%, rgba(29, 161, 242, 0) 100%);
+}
+
+.icon-marshmallow {
+    -webkit-mask-image: url('/res/icons/marshmallow.svg');
+    mask-image: url('/res/icons/marshmallow.svg');
+
+    background: linear-gradient(to bottom, #4c4c4c 0%, rgba(29, 161, 242, 0) 100%);
+}
+
+/*--------------*/
+
+@media (hover: none) {
+    .link-item {
+        width: 100%;
+    }
+
+    .link-item::after,
+    .link-item .icon {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+    .icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .icon-note {
+        width: 25px;
+        height: 25px;
+        top: auto;
+        bottom: 15px;
+        right: 47px;
+    }
+}

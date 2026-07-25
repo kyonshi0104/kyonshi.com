@@ -1,0 +1,259 @@
+.works-container {
+    display: grid;
+    width: 100%;
+    padding-left: 0;
+    grid-template-columns: 60% 15px 40%;
+}
+
+.works-items {
+    max-height: 300px;
+    min-height: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.works-item {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    padding: 10px;
+    padding-left: 20px;
+    margin: 10px;
+    margin-left: 0;
+    border: 1px solid #9b9999;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.works-item p , .works-item h2 {
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+.works-item:hover p, .works-item:hover h2 {
+    color:#e6e4e4
+}
+
+.works-item .works-image {
+    position: absolute;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: -1;
+}
+
+.works-item:hover .works-image {
+    opacity: 0.8;
+
+}
+
+.works-date {
+    text-decoration: underline;
+}
+
+.works-platform {
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+    color: #515f68;
+}
+
+.line {
+    border-left: solid 1px #727272;
+    margin: auto;
+    height: 250px;
+}
+
+.logo {
+    position: absolute;
+    right: 70px;
+    bottom: 0;
+
+    width: 130px;
+    height: 130px;
+
+    transform: translateX(20px);
+    transition: all 0.3s ease-in-out;
+
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+}
+
+.logo::before,
+.logo::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.logo::after {
+    background: linear-gradient(135deg, #e6e4e4 0%, rgba(29, 161, 242, 0) 100%);
+    opacity: 0;
+}
+
+.works-item:hover .logo {
+    transform: translateX(0px);
+}
+
+.works-item:hover .logo::before {
+    opacity: 0;
+}
+.works-item:hover .logo::after {
+    opacity: 1;
+}
+
+/*---------------------*/
+
+.works-description {
+    height: 300px;
+    padding: 10px;
+}
+
+.works-description img {
+    object-fit: cover;
+    width: 90%;
+    max-height: 150px;
+    border-radius: 10px;
+}
+
+/*---------------------*/
+
+.works-tabs {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid #e5e5e5;
+    position: relative;
+}
+
+.works-tab {
+    background: none;
+    border: none;
+    padding: 8px 16px;
+    font-size: 16px;
+    color: #888;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.works-tab.active {
+    color: #111;
+}
+
+.tab-indicator {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    height: 2px;
+    background-color: #111;
+    transition: transform 0.3s ease-in-out, width 0.3s ease-in-out;
+    width: 0;
+}
+
+.works-items {
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.works-items.fade-out {
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+/*-------------*/
+
+.logo-github {
+    -webkit-mask-image: url('/res/icons/github.svg');
+    mask-image: url('/res/icons/github.svg');
+}
+
+.logo-note {
+    -webkit-mask-image: url('/res/icons/note.svg');
+    mask-image: url('/res/icons/note.svg');
+
+    width: 90px;
+    height: 90px;
+}
+
+.logo-modrinth {
+    -webkit-mask-image: url('/res/icons/modrinth.svg');
+    mask-image: url('/res/icons/modrinth.svg');
+}
+
+.logo-github::before {
+    background: linear-gradient(135deg, #181717 0%, rgba(29, 161, 242, 0) 100%);
+    opacity: 1;
+}
+
+.logo-note::before {
+    background: linear-gradient(to bottom, #000000 0%, rgba(29, 161, 242, 0) 100%);
+    opacity: 1;
+}
+
+.logo-modrinth::before {
+    background: linear-gradient(to bottom, #00AF5C 0%, rgba(29, 161, 242, 0) 100%);
+    opacity: 1;
+}
+
+/*-------------*/
+
+@media (hover: none) {
+    .works-item .logo {
+        transform: translateX(0px);
+    }
+
+    .works-item .logo::before {
+        opacity: 0;
+    }
+    .works-items .logo::after {
+        opacity: 1;
+    }
+
+    .works-item .works-image {
+        opacity: 0.8;
+    }
+
+    .works-item p, .works-item h2 {
+        color:#e6e4e4
+    }
+
+    .logo {
+        right: 30px;
+        width: 90px;
+        height: 90px;
+    }
+
+    .works-items {
+        width: 100%;
+        margin-left: 10px;
+        padding: 0;
+    }
+
+    .works-container {
+        grid-template-columns: 100% 0 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .works-item h2 {
+        font-size: 20px;
+    }
+    .works-item p {
+        font-size: small;
+    }
+
+    .works-item {
+        padding-left: 10px;
+    }
+}

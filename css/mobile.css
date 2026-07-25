@@ -1,0 +1,89 @@
+hr {
+    border: none;
+    border-top: 1px solid #979190d5;
+    width: 20%;
+}
+
+.mobile-visible {
+    display: none;
+}
+
+/*-------------*/
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.footer-links > a {
+    position: relative;
+    width: 22px;
+    height: 22px;
+}
+
+.footer-links > a > span {
+    position: absolute;
+    inset: 0;
+
+    transition: all 0.3s ease-in-out;
+    background-color: #969595;
+
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+}
+
+.footer-twitter {
+    -webkit-mask-image: url('/res/icons/x.svg');
+    mask-image: url('/res/icons/x.svg');
+}
+
+.footer-github {
+    -webkit-mask-image: url('/res/icons/github.svg');
+    mask-image: url('/res/icons/github.svg');
+}
+
+.footer-discord {
+    -webkit-mask-image: url('/res/icons/discord.svg');
+    mask-image: url('/res/icons/discord.svg');
+}
+
+.footer-note {
+    -webkit-mask-image: url('/res/icons/note.svg');
+    mask-image: url('/res/icons/note.svg');
+    width: 15px;
+    height: 15px;
+    margin: auto;
+}
+
+.footer-modrinth {
+    -webkit-mask-image: url('/res/icons/modrinth.svg');
+    mask-image: url('/res/icons/modrinth.svg');
+}
+
+.footer-marshmallow {
+    -webkit-mask-image: url('/res/icons/marshmallow.svg');
+    mask-image: url('/res/icons/marshmallow.svg');
+}
+
+/*-------------*/
+
+@media (max-width:480px) {
+    .mobile-none {
+        display: none;
+    }
+
+    .mobile-visible {
+        display: block;
+    }
+
+    footer > p {
+        font-size: small;
+    }
+}
+

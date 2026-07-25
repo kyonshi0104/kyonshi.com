@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <title>Kyonshi / kyonshi0104</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+
+    <meta name="theme-color" content="#ffffff">
+    <meta name="description" content="Kyonshi Official Website">
+
+    <meta property="og:url" content="https://kyonshi.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Kyonshi">
+    <meta property="og:description" content="Kyonshi Official Website">
+    <meta property="og:site_name" content="Kyonshi's Home">
+    <meta property="og:image" content="https://kyonshi.com/res/imgs/banner.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@kyonshi0104">
+    <meta name="twitter:image" content="https://kyonshi.com/res/imgs/banner.png">
+
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/about.css">
+    <link rel="stylesheet" href="/css/links.css">
+    <link rel="stylesheet" href="/css/works.css">
+    <link rel="stylesheet" href="/css/topics.css">
+    <link rel="stylesheet" href="/css/contact.css">
+    <link rel="stylesheet" href="/css/color.css">
+    <link rel="stylesheet" href="/css/scrollbar.css">
+    <link rel="stylesheet" href="/css/mobile.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <script src="/js/works.js"></script>
+</head>
+<body>
+    <header class="mobile-none">
+        <h1>Kyonshi.com</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#links">Links</a>
+            <a href="#works">Works</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Welcome to Kyonshi.com</h2>
+        <hr class="mobile-visible">
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="flip-image">
+                    <img src="res/imgs/kyonshi.png" width="300px" height="300px" alt="Kyonshi" class="about-image img-front">
+                    <img src="res/imgs/kyonshi-cat.png" width="300px" height="300px" alt="Kyonshi-cat" class="about-image img-back">
+                </div>
+                <div class="about-text">
+                    <div class="about-name">
+                        <h1>Kyonshi</h1>
+                        <h1 class="about-cat">-cat</h1>
+                    </div>
+                    <p class="about-description">Web Developer / Minecraft MOD Developer / Software Engineer / Note Writer</p>
+                    <ul>
+                        <li>Birth Date: 2009/06/02</li>
+                        <li class="mobile-none">Languages & Markups: Go / Python / JavaScript / Markdown</li>
+                        <li>Hobbies: Programming, Writing, Music</li>
+                        <li class="mobile-none">Infrastructure: Ubuntu Server / Cloudflare / WebDAV</li>
+                    </ul>
+                    <p>kyonshiと申しまして、<br>趣味としてNoteの執筆、<br class="mobile-visible">たまに開発をしています。</p>
+                </div>
+            </div>
+        </section>
+        <hr class="mobile-visible">
+        <section>
+            <h2>Topic</h2>
+            <p>したこと</p>
+            <div class="topic-cards">
+                <div class="topic-card">
+                    <h2>Future Focus</h2>
+                    <p>作曲ができるようになりたいなあと思います。</p>
+                </div>
+                <a href="https://modrinth.com/mod/sanity-level" target="_blank" class="topic-card topic-link">
+                    <div class="topic-linkicon">
+                        <h2>Sanity Level MOD</h2>
+                    </div>
+                    <p>正気度ゲージと調整用アイテムをを追加する Minecraft MODを作成しました。</p>
+                    <img src="/res/imgs/sanitylevel-logo.png">
+                </a>
+                <a href="https://kotob.kyonshi.com/" target="_blank" class="topic-card topic-link">
+                    <div class="topic-linkicon">
+                        <h2>Kotob</h2>
+                    </div>
+                    <p>Tanahiro2010というユーザーと共同開発でGemini APIを用いたCLI翻訳ツールを制作しました。</p>
+                    <img src="/res/imgs/kotob-logo.png">
+                </a>
+                <a href="https://github.com/kyonshi0104/GitHue" target="_blank" class="topic-card topic-link">
+                    <div class="topic-linkicon">
+                        <h2>GitHue</h2>
+                    </div>
+                    <p>GitHub.comの配色をカスタマイズするChrome,Edge用拡張機能を制作しました。</p>
+                    <img src="/res/imgs/githue-logo.png">
+                </a>
+                <div class="topic-card">
+                    <h2>Infrastructure</h2>
+                    <p>Ubuntu Serverを用いたサーバー構築やCloudflare tunnel、またはDDNSを用いた動的IPへの対応、<br>あとはWebDAVによるファイルサーバー運用などを行いました。</p>
+                </div>
+            </div>
+        </section>
+        <hr class="mobile-visible">
+        <section id="works">
+            <h2>Works</h2>
+            <div class="works-tabs">
+                <button class="works-tab active" data-platform="modrinth">Modrinth</button>
+                <button class="works-tab" data-platform="github">GitHub</button>
+                <button class="works-tab" data-platform="note">Note</button>
+                <div class="tab-indicator"></div>
+            </div>
+            <p>網羅しているわけではありませんが作ったものをまとめています。</p>
+            <div class="works-container">
+                <div class="works-items">
+                </div>
+                <div class="line mobile-none"></div>
+                <div class="works-description mobile-none">
+                </div>
+            </div>
+        </section>
+        <div class="split">
+            <section id="links" class="mobile-none">
+                <h2>Links</h2>
+                <a href="https://x.com/kyonshi0104" target="_blank" class="link-item">
+                    <h2>Twitter (X)</h2>
+                    <span class="icon icon-twitter"></span>
+                </a>
+                <a href="https://github.com/kyonshi0104" target="_blank" class="link-item">
+                    <h2>GitHub</h2>
+                    <span class="icon icon-github"></span>
+                </a>
+                <a href="https://discord.com/users/1189807997669609552" target="_blank" class="link-item">
+                    <h2>Discord</h2>
+                    <span class="icon icon-discord"></span>
+                </a>
+                <a href="https://note.com/kyonshi0104" target="_blank" class="link-item">
+                    <h2>Note</h2>
+                    <span class="icon icon-note"></span>
+                </a>
+                <a href="https://modrinth.com/user/kyonshi0104" target="_blank" class="link-item">
+                    <h2>Modrinth</h2>
+                    <span class="icon icon-modrinth"></span>
+                </a>
+                <a href="https://marshmallow-qa.com/n6592ln6qw1dr43" target="_blank" class="link-item">
+                    <h2>マシュマロ</h2>
+                    <span class="icon icon-marshmallow"></span>
+                </a>
+            </section>
+            <hr class="mobile-visible">
+            <section id="contact">
+            <h2>Contact</h2>
+            <p>重要なご連絡はメールまたはDiscordでお願いします。<br>匿名の場合や、<br>どうでもいいことであればマシュマロなどご活用ください。</p>
+            <p><b>Email:</b><br class="mobile-visible"> <a href="mailto:contact@kyonshi.com">contact@kyonshi.com</a></p>
+            <p><b>マシュマロ:</b><br class="mobile-visible"> <a href="https://marshmallow-qa.com/n6592ln6qw1dr43">https://marshmallow-qa.com/n6592ln6qw1dr43</a></p>
+            </section>
+        </div>
+        <hr>
+        <footer>
+            <div class="mobile-visible">
+                <div class="footer-links">
+                    <a href="https://x.com/kyonshi0104" target="_blank">
+                        <span class="footer-twitter"></span>
+                    </a>
+                    <a href="https://github.com/kyonshi0104" target="_blank">
+                        <span class="footer-github"></span>
+                    </a>
+                    <a href="https://discord.com/users/1189807997669609552" target="_blank">
+                        <span class="footer-discord"></span>
+                    </a>
+                    <a href="https://note.com/kyonshi0104" target="_blank">
+                        <span class="footer-note"></span>
+                    </a>
+                    <a href="https://modrinth.com/user/kyonshi0104" target="_blank">
+                        <span class="footer-modrinth"></span>
+                    </a>
+                    <a href="https://marshmallow-qa.com/n6592ln6qw1dr43" target="_blank">
+                        <span class="footer-marshmallow"></span>
+                    </a>
+                </div>
+            </div>
+            <p>© 2026 kyonshi0104 <span class="mobile-none">All Rights Reserved.</span></p>
+        </footer>
+    </main>
+</body>
