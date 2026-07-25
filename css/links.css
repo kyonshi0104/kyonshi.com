@@ -59,7 +59,7 @@
     transform: translateX(0px);
 }
 
-/*--------------------*/
+/*-------------*/
 
 .icon-twitter {
     -webkit-mask-image: url('/res/icons/x.svg');
@@ -103,7 +103,7 @@
     background: linear-gradient(to bottom, #4c4c4c 0%, rgba(29, 161, 242, 0) 100%);
 }
 
-/*--------------*/
+/*-------------*/
 
 @media (hover: none) {
     .link-item {
