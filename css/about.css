@@ -68,6 +68,12 @@
     transform: translateX(0px);
 }
 
+.about-badge {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
 /*-------------*/
 
 @media (max-width: 480px) {
